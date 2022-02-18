@@ -1,9 +1,9 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-function pagination($atual, $total_registros, $por_pagina, $url,  $separador = '/'){
+function pagination($atual, $total_registros, $por_pagina, $url,$get = '',  $separador = '/'){
 
-    $url_page_def = BASE_URL.$url.$separador.'%d'.$separador.$por_pagina;
+    $url_page_def = BASE_URL.$url.$separador.'%d'.$separador.$por_pagina.$separador.$get;
 
     $total = @ceil( $total_registros / $por_pagina);
 	$mnt_page ='';
